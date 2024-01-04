@@ -211,35 +211,6 @@ void TạoThưMụcVScode()
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "clean-debug-folder",
-      "type": "shell",
-      "command": "Remove-Item",
-      "args": ["-Recurse", "${workspaceFolder}\\build\\debug"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "label": "create-debug-folder",
-      "type": "shell",
-      "command": "mkdir",
-      "args": ["${workspaceFolder}\\build\\debug"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "dependsOn": ["clean-debug-folder"]
-    },
-    {
       "label": "cmake-debug",
       "type": "shell",
       "command": "D:/Cmake/bin/cmake",
@@ -266,8 +237,7 @@ void TạoThưMụcVScode()
       "presentation": {
         "reveal": "always",
         "panel": "new"
-      },
-      "dependsOn": ["create-debug-folder"]
+      }
     },
     {
       "label": "make-debug",
@@ -292,35 +262,6 @@ void TạoThưMụcVScode()
         "panel": "new"
       },
       "dependsOn": ["cmake-debug"]
-    },
-    {
-      "label": "clean-release-folder",
-      "type": "shell",
-      "command": "Remove-Item",
-      "args": ["-Recurse", "${workspaceFolder}\\build\\release"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "label": "create-release-folder",
-      "type": "shell",
-      "command": "mkdir",
-      "args": ["${workspaceFolder}\\build\\release"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "dependsOn": ["clean-release-folder"]
     },
     {
       "label": "cmake-release",
@@ -349,8 +290,7 @@ void TạoThưMụcVScode()
       "presentation": {
         "reveal": "always",
         "panel": "new"
-      },
-      "dependsOn": ["create-release-folder"]
+      }
     },
     {
       "label": "make-release",
