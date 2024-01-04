@@ -134,7 +134,7 @@ void TạoThưMụcVScode()
             "cStandard": "c99",
             "cppStandard": "c++20",
             "intelliSenseMode": "gcc-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cpptools"
         }
     ],
     "version": 4
